@@ -8,6 +8,27 @@ require_relative('../guest')
 
 class TestGuest < Minitest::Test
 
+  def setup
+    @song1 = Song.new("Beezlebum", "Blur")
+    @song2 = Song.new("The chain", "Fleetwood Mac")
+    @song3 = Song.new("Size of the moon", "Pinegrove")
+    @guest1 = Guest.new("Harold", 50, @song1)
+    @guest2 = Guest.new("Mark", 30, @song2)
+    @guest3 = Guest.new("Jenny", 5, @song3)
+
+  end
+
+  def test_check_customer_has_name
+    assert_equal("Jenny", @guest3.name)
+  end
+
+  def test_check_guest_has_favourite_song
+    assert_equal(@song3, @guest3.fav_song)
+  end
+
+  def test_check_guest_has_money
+    assert_equal(15, @guest3.wallet)
+  end
 
 
 
