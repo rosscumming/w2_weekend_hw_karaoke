@@ -77,49 +77,5 @@ class TestRoom < Minitest::Test
     room_playlist_is_full = @room1.add_song(@song3)
     assert_equal(3, room_playlist_is_full.length)
   end
-
-
-  #
-  # def test_check_rooms_total_capacity
-  #   assert_equal(3, @room1.capacity)
-  # end
-  #
-  # def test_check_room_starts_at_zero_capacity
-  #   current_occupants = @room1.room_starts_at_zero_capacity
-  #   assert_equal(0, current_occupants)
-  # end
-  #
-  # def test_check_rooms_entry_fee_cost
-  #   assert_equal(5, @room1.entry_fee)
-  # end
-  #
-  # def test_check_guest_can_afford_room_if_true
-  #   can_afford_room = @room1.can_afford_room(@guest1)
-  #   assert_equal(true, can_afford_room)
-  # end
-  #
-  # def test_check_guest_can_afford_room_if_false
-  #   can_afford_room = @room3.can_afford_room(@guest3)
-  #   assert_equal(false, can_afford_room)
-  # end
-  #
-  # # def test_add_guest_to_room
-  # #   guest_added_to_room = @room3.add_guest_to_room(@guest1)
-  # #   assert_equal(1, guest_added_to_room)
-  # # end
-  #
-  # def test_add_guest_into_room
-  #   add_to_room = @room1.add_guest_to_room(@guest1)
-  #   assert_equal(1, add_to_room.length)
-  # end
-  #
-  # def test_remove_guest_from_room
-  #   @room1.add_guest_to_room(@guest1)
-  #   @room1.add_guest_to_room(@guest2)
-  #   guest_removed =  @room1.remove_guest_from_room(@guest1)
-  #   assert_equal("Harold", guest_removed)
-  # end
-
-
-
+  
 end

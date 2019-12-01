@@ -44,40 +44,4 @@ class Room
   end
 
 
-
-  #
-  # def room_starts_at_zero_capacity
-  #   @occupants.length
-  # end
-  #
-  # def add_guest_to_room(guest)
-  #   @occupants << guest
-  # end
-  #
-  # def remove_guest_from_room(guest)
-  #   @occupants.delete(guest.name)
-  #
-  # end
-
-  # def remove_guest_from_room(room, guest)
-  #
-  # end
-
-
-  # def check_guest_in(guest)
-  #   if guest.can_afford_room == true
-  #     guest.push(@occupants)
-  # end
-  #
-
-
-
-
-  # def room_capacity(room)
-  #   room.length
-  # end
-  #
-  # def check_guest_in()
-  #
-  # end
 end
