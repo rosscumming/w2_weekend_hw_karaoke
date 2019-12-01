@@ -9,7 +9,12 @@ class Guest
 
   end
 
+  def entry_fee(entry_fee)
+    @wallet -= entry_fee
+  end
 
-
+  def favourite_song(song)
+    p "whoo" if @fav_song == song
+  end
 
 end
