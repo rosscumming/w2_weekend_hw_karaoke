@@ -43,5 +43,9 @@ class Room
     @playlist.length
   end
 
+  def check_capacity(group)
+    return true if @capacity >= group.length 
+    return false
+  end
 
 end

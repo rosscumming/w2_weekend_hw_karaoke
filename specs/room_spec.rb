@@ -19,13 +19,16 @@ class TestRoom < Minitest::Test
     @song1 = Song.new("Beetlebum", "Blur")
     @song2 = Song.new("The chain", "Fleetwood Mac")
     @song3 = Song.new("Size of the moon", "Pinegrove")
-    @playlist = [@song1, @song2, @song3]
+    @song4 = Song.new("Motion Sicknesss", "Phoebe Bridgers")
+    @playlist = [@song1, @song2, @song3, @song4]
 
 
     @guest1 = Guest.new("Harold", 50, @song1)
     @guest2 = Guest.new("Mark", 30, @song2)
     @guest3 = Guest.new("Jenny", 5, @song3)
-    @group = [@guest1, @guest2, @guest3]
+    @guest4 = Guest.new("Bill", 10, @song4)
+    @group1 = [@guest1, @guest2, @guest3, @guest4]
+    @group2 = [@guest1, @guest2, @guest3]
 
   end
 
@@ -54,6 +57,13 @@ class TestRoom < Minitest::Test
     assert_equal(["Mark"], @room1.occupants_names)
   end
 
+  def test_check_group_can_enter_into_room_if_under_capacity
+    assert_equal(true, @room1.check_capacity(@group2))
+  end
+
+  def test_check_group_cannot_enter_into_room_if_over_capacity
+    assert_equal(false, @room1.check_capacity(@group1))
+  end
 
   def test_customer_wallet_decrease_when_entering_room
     @room1.add_guest(@guest1)
@@ -77,5 +87,5 @@ class TestRoom < Minitest::Test
     room_playlist_is_full = @room1.add_song(@song3)
     assert_equal(3, room_playlist_is_full.length)
   end
-  
+
 end

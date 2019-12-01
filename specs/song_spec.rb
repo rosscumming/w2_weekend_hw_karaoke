@@ -11,6 +11,8 @@ class TestSong < Minitest::Test
     @song1 = Song.new("Beetlebum", "Blur")
     @song2 = Song.new("The chain", "Fleetwood Mac")
     @song3 = Song.new("Size of the moon", "Pinegrove")
+    @song4 = Song.new("Motion Sicknesss", "Phoebe Bridgers")
+
 
   end
 

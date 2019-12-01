@@ -12,9 +12,12 @@ class TestGuest < Minitest::Test
     @song1 = Song.new("Beetlebum", "Blur")
     @song2 = Song.new("The chain", "Fleetwood Mac")
     @song3 = Song.new("Size of the moon", "Pinegrove")
+    @song4 = Song.new("Motion Sicknesss", "Phoebe Bridgers")
     @guest1 = Guest.new("Harold", 50, @song1)
     @guest2 = Guest.new("Mark", 30, @song2)
     @guest3 = Guest.new("Jenny", 5, @song3)
+    @guest4 = Guest.new("Bill", 10, @song4)
+
 
   end
 
